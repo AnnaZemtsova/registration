@@ -1,0 +1,33 @@
+<div class="wrapper">
+  <form [formGroup]="userForm" (ngSubmit)="registration()">
+    <div class="labels">
+      <div class="input-wrapper">
+        <label for="name">Name</label>
+        <input id="name" type="text" formControlName="name">
+      </div>
+      <div class="input-wrapper">
+        <label>Surname</label>
+        <input type="text" formControlName="surname">
+      </div>
+      <div class="input-wrapper">
+        <label>Email</label>
+        <input type="email" formControlName="email">
+      </div>
+      <div class="input-wrapper">
+        <label>Phone number</label>
+        <input type="tel" formControlName="phone">
+      </div>
+      <div class="input-wrapper">
+        <label>Password</label>
+        <input type="password" formControlName="password">
+      </div>
+      <div class="input-wrapper">
+        <label>Confirm password</label>
+        <input type="password" formControlName="repeatedPass">
+      </div>
+      <div>
+        <button type="submit" [disabled]="userForm.invalid">Registration</button>
+      </div>
+    </div>
+  </form>
+</div>
